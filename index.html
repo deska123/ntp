@@ -8,13 +8,14 @@
   	<script src="js/jquery.min.js"></script>
   	<script src="js/popper.min.js"></script>
   	<script src="js/bootstrap.min.js"></script>
+    <script src="js/scroll.js"></script>
     <style>
       body {
           position: relative; 
       }
   </style>
   </head>
-  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+  <body id="ntp" data-spy="scroll" data-target=".navbar" data-offset="50">
     <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
       <!-- Brand -->
       <a class="navbar-brand" href="index.html">
@@ -28,7 +29,7 @@
 
       <!-- Collapsible Navbar links -->
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav nav-pills">
           <li class="nav-item">
             <a class="nav-link" href="#aboutUs">About Us</a>
           </li>
@@ -51,17 +52,9 @@
       </div>
     </nav>
 
-    <div class="jumbotron text-center bg-light text-black" style="padding-top:70px;padding-bottom:70px">
+    <div class="jumbotron text-center bg-light text-black" style="padding-top:90px">
       <h1>PT. Nariska Tresnandy Pratama</h1> 
       <p>We focus in Outsourcing Man Power Distribution</p> 
-      <form>
-        <div class="input-group">
-          <input type="email" class="form-control" size="50" placeholder="Email Address" style="cursor: not-allowed;" disabled>
-          <div class="input-group-btn">
-            <button type="button" class="btn btn-danger" style="cursor: not-allowed;" disabled>Subscribe</button>
-          </div>
-        </div>
-      </form>
     </div>
 
     <div id="aboutUs" class="container-fluid bg-primary text-white" style="padding-top:70px;padding-bottom:70px">
@@ -243,5 +236,12 @@
         </div>
       </div>
     </div>
+
+    <footer class="container-fluid text-center bg-primary text-light" style="padding-top:10px;padding-bottom:10px">
+      <a id="backToTop" href="#ntp" title="To Top">
+        <i class='fas fa-chevron-up' style='font-size:36px;color:white'></i>
+      </a>
+      <p>Copyright <i class="far fa-copyright"></i> <script>document.write(new Date().getFullYear())</script> <a href="https://about.me/dennis.kamah" title="DPK" style="color:white; text-decoration: none" target="_blank">DPK Collections</a> All Rights Reserved</p>
+    </footer>
   </body>
 </html>
