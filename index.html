@@ -14,6 +14,7 @@
   	<script src="js/popper.min.js"></script>
   	<script src="js/bootstrap.min.js"></script>
     <script src="js/scroll.js"></script>
+    <script src="js/comments.js"></script>
     <style>
       body {
           position: relative; 
@@ -307,17 +308,24 @@
         </div>
         <div class="col-sm-7">
           <div class="row">
-            <div class="col-sm-6 form-group">
+            <div id="nameInput" class="col-sm-6 form-group has-error has-feedback">
               <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
             </div>
             <div class="col-sm-6 form-group">
               <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
             </div>
           </div>
-          <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
           <div class="row">
             <div class="col-sm-12 form-group">
-              <button class="btn btn-default pull-right" type="submit">Send</button>
+              <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 form-group">
+              <button id="sendComments" class="btn btn-info pull-right" type="submit">Send</button>&nbsp;&nbsp;
+              <div id="commentsError" class="alert alert-danger" style="display: none;">
+                <strong id="commentsErrorMarking"></strong>
+              </div>
             </div>
           </div>
         </div>
