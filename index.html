@@ -3,7 +3,7 @@
   <head>
     <title>PT. Nariska Tresnandy Pratama - Company Profile</title>
     <meta charset="utf-8">
-    <meta name="description" content="Profil Perusahaan PT. Nariska Tresnandy Pratama">
+    <meta name="description" content="Company Profile of PT. Nariska Tresnandy Pratama">
     <meta name="keywords" content="PT. Nariska Tresnandy Pratama, Nariska Tresnandy Pratama, ntp, Profil Perusahaan, Outsourcing, Bekasi, Supir, Driver, Kernet, Co-Driver, Satpam, Security, Office Boy, Tenaga Admin">
     <meta name="author" content="PT. Nariska Tresnandy Pratama">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,6 +22,26 @@
   </style>
   </head>
   <body id="ntp" data-spy="scroll" data-target=".navbar" data-offset="50">
+    <div class="modal fade" id="ntpModal">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 id="ntpModalTitle" class="modal-title"></h4>
+            <button id="ntpCloseModal" type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body" id="ntpModalBody"></div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer" id="ntpModalFooter">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <nav class="navbar navbar-expand-md bg-secondary navbar-dark fixed-top">
       <!-- Brand -->
       <a class="navbar-brand" href="index.html">
@@ -322,6 +342,9 @@
           </div>
           <div class="row">
             <div class="col-sm-12 form-group">
+              <div class="alert alert-danger alert-dismissible" id="inputError" style="display: none">
+                <div id="inputErrorMessage"></div>
+              </div>
               <button id="sendComments" class="btn btn-info pull-right" type="submit">Send</button>&nbsp;&nbsp;
             </div>
           </div>
