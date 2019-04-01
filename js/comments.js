@@ -1,14 +1,14 @@
 $(document).ready(function(){
-	$("#name").keypress(function(){
-		$("#inputError").hide();
+	$("#name").keydown(function(){
+		hideInputError("name");
 	});
 
-	$("#email").keypress(function(){
-		$("#inputError").hide();
+	$("#email").keydown(function(){
+		hideInputError("email");
 	});
 
-	$("#comments").keypress(function(){
-		$("#inputError").hide();
+	$("#comments").keydown(function(){
+		hideInputError("comments");
 	});
 
 	$("#sendComments").click(function(){
@@ -17,15 +17,15 @@ $(document).ready(function(){
 		var tempComments = $("#comments").val().trim();
 
 		if(tempName == "" || tempName.length == 0) {
-			showInputError("Name can't be empty !");
+			showInputError("Name can't be empty !", "Name must be filled !", "name");
 		} else if(tempEmail == "" || tempEmail.length == 0) {
-			showInputError("Email can't be empty !");
+			showInputError("Email can't be empty !", "Email must be filled !", "email");
 		} else {
 			if(validateEmail(tempEmail) == false) {
-				showInputError("Email is invalid !");
+				showInputError("Email is invalid !", "Invalid Email !", "email");
 			} else if(validateEmail(tempEmail) == true){
 				if(tempComments == "" || tempComments.length == 0) {
-					showInputError("Comment can't be empty !");
+					showInputError("Comment can't be empty !", "Comment must be filled !", "comments");
 				} else {
 					$("#ntpCloseModal").hide();
 					$("#ntpModalFooter").hide();
@@ -69,9 +69,18 @@ $(document).ready(function(){
 		}
 	});
 
-	function showInputError(message) {
+	function showInputError(alertMessage, tooltipMessage, id) {
+		$("#" + id).addClass("border border-danger");
+		$("#" + id).attr("title", tooltipMessage);
+		$("#" + id).tooltip('show'); 
 		$("#inputError").show();
-		$("#inputErrorMessage").html(message);
+		$("#inputErrorMessage").html(alertMessage);
+	}
+
+	function hideInputError(id) {
+		$("#inputError").hide();
+		$("#" + id).tooltip('dispose');
+		$("#" + id).removeClass("border border-danger");
 	}
 
 	//Taken from https://www.tutorialspoint.com/How-to-validate-email-using-jQuery
