@@ -25,7 +25,7 @@ $(document).ready(function(){
 				showInputError("Email is invalid !", "Invalid Email !", "email");
 			} else if(validateEmail(tempEmail) == true){
 				if(tempComments == "" || tempComments.length == 0) {
-					showInputError("Comment can't be empty !", "Comment must be filled !", "comments");
+					showInputError("Messages can't be empty !", "Messages must be filled !", "comments");
 				} else {
 					$("#ntpCloseModal").hide();
 					$("#ntpModalFooter").hide();
@@ -54,9 +54,9 @@ $(document).ready(function(){
 
 						var html = "";
 						if(data == "Success") {
-							html = "<div class=\"alert alert-success\"><i class=\"fas fa-check-circle\"></i>&nbsp;&nbsp;Successfully sending your comments</div>";
+							html = "<div class=\"alert alert-success\"><i class=\"fas fa-check-circle\"></i>&nbsp;&nbsp;Successfully sending your messages</div>";
 						} else if(data == "Failed") {
-							html = "<div class=\"alert alert-danger\"><i class=\"fas fa-times-circle\"></i>&nbsp;&nbsp;Failed sending your comments</div>";
+							html = "<div class=\"alert alert-danger\"><i class=\"fas fa-times-circle\"></i>&nbsp;&nbsp;Failed sending your messages</div>";
 						}
 						$("#ntpModalBody").html(html);
 
