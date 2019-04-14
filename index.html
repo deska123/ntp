@@ -343,7 +343,7 @@
           </div>
           <div class="row">
             <div class="col-sm-4 form-group">
-              <img id="captchaImage" src="" alt="CAPTCHA Image" />&nbsp;&nbsp;&nbsp;&nbsp;
+              <img id="captchaImage" src="" alt="CAPTCHA Image" />&nbsp;&nbsp;&nbsp;
               <i id="refreshCaptchaImage" class='fas fa-sync' style='font-size:40px; cursor: pointer;'></i>
             </div>
             <div class="col-sm-8 form-group">
@@ -356,7 +356,13 @@
               <div class="alert alert-danger alert-dismissible" id="inputError" style="display: none">
                 <div id="inputErrorMessage"></div>
               </div>
-              <button id="sendComments" class="btn btn-info pull-right" type="submit">Send</button>&nbsp;&nbsp;
+              <noscript>
+                <div class="alert alert-warning">
+                  <strong>Alert! </strong>Please enable Javascript in your browser before sending messages !
+                </div>
+                <button class="btn btn-info pull-right" style="cursor: not-allowed;" disabled>Send</button>
+              </noscript>
+              <div class="sendCommentsSection"></div>
             </div>
           </div>
         </div>

@@ -3,6 +3,8 @@ $(document).ready(function(){
       $("#captchaImage").attr("src", "securimage/securimage_show.php");
     });
 
+    $(".sendCommentsSection").html("<button id=\"sendComments\" class=\"btn btn-info pull-right\">Send</button>");
+
     $("#refreshCaptchaImage").click(function(){
     	$("#captchaImage").attr("src", "securimage/securimage_show.php");
     	hideInputError("captchaText");
